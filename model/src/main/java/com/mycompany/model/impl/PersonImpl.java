@@ -10,6 +10,15 @@ import java.util.Date;
 public class PersonImpl implements Person{
     private Date birth;
     private Date death;
+    private Gender gender;
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
     private FamilyRelation familyRelation;
 
     public Date getBirth() {
