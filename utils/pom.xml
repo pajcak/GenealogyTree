@@ -8,16 +8,14 @@
   </parent>
 
     <groupId>com.mycompany</groupId>
-    <artifactId>model</artifactId>
+    <artifactId>utils</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
-    <name>model</name>
+    <name>utils OSGi Bundle</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -38,8 +36,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-Activator>com.mycompany.model.Activator</Bundle-Activator>
-                        <Export-Package />
+                        <Bundle-Activator>com.mycompany.utils.Activator</Bundle-Activator>
+                        <Export-Package >com.mycompany.utils</Export-Package>
+                        <Private-Package>com.mycompany.utils.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

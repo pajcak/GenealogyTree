@@ -7,8 +7,14 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
   <modules>
     <module>model</module>
+    <module>application</module>
+    <module>controller</module>
+    <module>view</module>
+    <module>utils</module>
   </modules>
 </project>

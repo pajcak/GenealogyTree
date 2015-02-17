@@ -8,11 +8,11 @@
   </parent>
 
     <groupId>com.mycompany</groupId>
-    <artifactId>model</artifactId>
+    <artifactId>view</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
 
-    <name>model</name>
+    <name>view OSGi Bundle</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,6 +27,11 @@
             <version>4.3.0</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>utils</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -38,8 +43,9 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-Activator>com.mycompany.model.Activator</Bundle-Activator>
-                        <Export-Package />
+                        <Bundle-Activator>com.mycompany.view.Activator</Bundle-Activator>
+                        <Export-Package >com.mycompany.view</Export-Package>
+                        <Private-Package>com.mycompany.view.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
